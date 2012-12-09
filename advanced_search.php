@@ -37,6 +37,7 @@
   // Get category name and item counts
 
   $query = "SELECT * FROM candy_store_schema.candy where (cname " . $nameSelect . " '" . $candyName . "')";
+  $query .= " AND (ctype " . $typeSelect . " '" . $candyType . "')";
   // Execute the query and check for errors
   $result = pg_query($query);
   if (!$result) {
