@@ -36,7 +36,7 @@
 	or die ("Couldn't Connect ".pg_last_error()); 
   // Get category name and item counts
 
-  $query = "SELECT * FROM candy_store_schema.candy where (cname " . $nameSelect . " " . $candyName . ")";
+  $query = "SELECT * FROM candy_store_schema.candy where (cname " . $nameSelect . " '" . $candyName . "')";
   // Execute the query and check for errors
   $result = pg_query($query);
   if (!$result) {
