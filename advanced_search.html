@@ -1,18 +1,69 @@
 <html>
 
- <head><title>CS 564 PHP Project: Managing a Database of Books</title></head>
+  <head><title>CS 564 PHP Project: Managing a Database of Candy</title></head>
 
- <body>
+  <h1>Advanded Search of Candy</h1>
+  <body>
+      <h2>Enter candy information: </h2>
+      <table width="43%" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+        <form name="form1" method="post" action="https://cs564.cs.wisc.edu/gblock/cs564Proj7/advanced_search.php">
+          <tr align="center">
+            <td height="30" class="deepred" width="45%"><font face="Times New Roman, Times, serif">Candy Name</font></td>
+            <td height="30" class="deepred" width="28%"><input type="text" name="candy_name"></td>
+            <td height="30" class="deepred" width="27%">
+              <select name="nameSelect">
+                  <option value="like">Contains</option>
+                  <option value="=">Equals</option>
+                  <option value="not like">Does Not Contain</option>
+              </select>  
+            </td>
+          </tr>
+          <tr align="center">   
+            <td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Candy Type</font></td>
+            <td height="30" class="deepred" width="52%"><input type="text" name="candy_type"></td>
+            <td height="30" class="deepred" width="27%">
+              <select name="typeSelect">
+                  <option value="like">Contains</option>
+                  <option value="=">Equals</option>
+                  <option value="not like">Does Not Contain</option>
+              </select>  
+            </td>
+          </tr>
 
-This part provides an advanced search capability. That is, one should be able
-to search for books using a combination of attributes, such as title and price, 
-or title and quantity, etc.<p>
+          <tr align="center">   
+            <td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Candy Price</font></td>
+            <td height="30" class="deepred" width="52%"><input type="text" name="candy_price"></td>
+            <td height="30" class="deepred" width="27%">
+              <select name="priceSelect">
+                  <option value="=">Equal</option>
+                  <option value="<">Less Than</option>
+                  <option value=">">Greater Than</option>
+                  <option value=">=">Greater dThan or Euqal</option>
+                  <option value="<=">Less Than or Euqal</option>
+              </select>  
+            </td>
+          </tr>
 
-We do not provide a sample implementation 
-for this part, in the book domain. You will have to implement such an advanced
-search capability for your project domain.
-
-
-</body>
+          <tr align="center">   
+            <td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Candy Quantity</font></td>
+            <td height="30" class="deepred" width="52%"><input type="text" name="candy_quantity"></td>
+            <td height="30" class="deepred" width="27%">
+              <select name="quantitySelect">
+                  <option value="=">Equal</option>
+                  <option value="<">Less Than</option>
+                  <option value=">">Greater Than</option>
+                  <option value=">=">Greater Than or Euqal</option>
+                  <option value="<=">Less Than or Euqal</option>
+              </select>  
+            </td>
+          </tr>
+          <tr>
+            <td height="24" align="center" width="48%"></td>
+            <td align="center" width="52%"><input type="submit" name="Submit" value="Submit"><input type="reset" name="Submit2" value="Reset"></td>
+          </tr>
+      </form>
+    </table>
+<a href=\"https://cs564.cs.wisc.edu/gblock/cs564Proj7/index.html\">Back to main page</a>
+  </body>
 
 </html>
