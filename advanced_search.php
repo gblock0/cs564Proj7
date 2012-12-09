@@ -39,7 +39,7 @@
   $query = "SELECT * FROM candy_store_schema.candy where (cname " . $nameSelect . " '" . $candyName . "')";
   $query .= " AND (ctype " . $typeSelect . " '" . $candyType . "')";
   $query .= " AND (cprice " . $priceSelect . " " . $candyPrice . ")";
-  $query .= " AND (cquantity " . $quantitySelect . " " . $candyQuantity . ")";
+  //$query .= " AND (cquantity " . $quantitySelect . " " . $candyQuantity . ")";
   // Execute the query and check for errors
   $result = pg_query($query);
   if (!$result) {
