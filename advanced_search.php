@@ -31,6 +31,15 @@
     $candyType = "%" . $candyType . "%";
   }
 
+  if($candyPrice == NULL){
+    $candyPrice = -1;
+    $priceSelect = ">";
+  }
+  if($candyQuantity == NULL){
+    $candyQuantity = -1;
+    $quantitySelect = ">";
+  }
+
   // Connect to the Database
   pg_connect('dbname=cs564_f12 host=postgres.cs.wisc.edu') 
 	or die ("Couldn't Connect ".pg_last_error()); 
