@@ -24,11 +24,11 @@
   $priceSelect = $_POST['priceSelect'];
   $quantitySelect = $_POST['quantitySelect'];
   if(($nameSelect == "like") || ($nameSelect == "not like")){
-    $candyName = "'%" . $candyName . "%'";
+    $candyName = "%" . $candyName . "%";
   }
 
   if(($typeSelect == "like") || ($typeSelect == "not like")){
-    $candyType = "'%" . $candyType . "%'";
+    $candyType = "%" . $candyType . "%";
   }
 
   // Connect to the Database
