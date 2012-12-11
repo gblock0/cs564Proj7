@@ -19,11 +19,11 @@
 	or die ("Couldn't Connect ".pg_last_error()); 
   // Get category name and item counts
   if( strlen($candyName) > 0)	{
-    $query = "delete from candy_store_schema.candy (cname) values (";
+    $query = "delete from candy_store_schema.candy where ";
     if(strlen($candyName)){
-      $query .= "'" .$candyName . "')";
+      $query .= " cname='" . $candyName . "'";
     }else{
-      $query .= "'')";
+      $query .= "''";
     }
 
   }else	{
