@@ -14,14 +14,11 @@
     exit();
   }
   $candyName = $_POST['dCandyName'];
-  $candyPrice = $_POST['dCandyPrice'];
-  $candyQuantity = $_POST['dCandyQuantity'];
-  $candyType = $_POST['dCandyType'];
   // Connect to the Database
   pg_connect('dbname=cs564_f12 host=postgres.cs.wisc.edu') 
 	or die ("Couldn't Connect ".pg_last_error()); 
   // Get category name and item counts
-  if( strlen($candyPrice) > 0 || strlen($candyType) > 0 || strlen($candyQuantity) > 0)	{
+  if( strlen($candyName) > 0)	{
     $query = "delete from candy_store_schema.candy (cname) values (";
     if(strlen($candyName)){
       $query .= "'" .$candyName . "')";
