@@ -9,7 +9,7 @@
   if (!isset($_POST['uCandyName']) ) {
     echo "  <h3><i>Error, title not set to an acceptable value</i></h3>\n".
         " <a href=\"https://cs564.cs.wisc.edu/gblock/cs564Proj7/index.html\">Back to main page</a>\n".
-	" </body>\n</html>\n"
+	" </body>\n</html>\n";
     exit();
   }
   $candyName = $_POST['uCandyName'];
