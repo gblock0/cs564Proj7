@@ -60,7 +60,7 @@
     echo "Error with query: " . $errormessage;
     exit();
   }
-  echo "  <h3>Update Successful</h3>";
+  echo "  <h3>Insert Successful</h3>";
   
   pg_close();
 ?>
