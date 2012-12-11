@@ -6,34 +6,44 @@
 	
  <?php
    // First check the itemid to see if it has been set
-  if (!isset($_POST['title']) ) {
+  if (!isset($_POST['uCandyName']) ) {
     echo "  <h3><i>Error, title not set to an acceptable value</i></h3>\n".
-        " <a href=\"https://cs564.cs.wisc.edu/halit/index.html\">Back to main page</a>\n".
-	" </body>\n</html>\n";
+        " <a href=\"https://cs564.cs.wisc.edu/gblock/cs564Proj7/index.html\">Back to main page</a>\n".
+	" </body>\n</html>\n"
     exit();
   }
-  $title = $_POST['title'];
-  $author = $_POST['author'];
-  $num = $_POST['num'];
+  $candyName = $_POST['uCandyName'];
+  $candyPrice = $_POST['uCandyPrice'];
+  $candyQuantity = $_POST['uCandyQuantity'];
+  $candyType = $_POST['uCandyType'];
   // Connect to the Database
   pg_connect('dbname=cs564_f12 host=postgres.cs.wisc.edu') 
 	or die ("Couldn't Connect ".pg_last_error()); 
   // Get category name and item counts
-  if( strlen($author) > 0 || strlen($num) > 0 )	{
-	$query = "update stage7_book_schema.book set";
-	if( strlen($author) )	{
-	$query .= " author='".$author."'";
+  if( strlen($candyPrice) > 0 || strlen($candyType) > 0 || strlen($candyQuantity) > 0)	{
+    $query = "update candy_store_schema.candy set";
+	if( strlen($candyPrice) )	{
+    $query .= " cprice=".$candyPrice;
 	}
-	if( strlen($author) && strlen($num) )	{
-	$query .= ",";
+	if( strlen($candyPrice) && strlen($candyType)  )	{
+    $query .= ",";
 	}
-	if( strlen($num) )	{
-	$query .= " num=".$num;
-	}
-	$query .= " where title='".$title."'";
+	if( strlen($candyType) )	{
+    $query .= " ctype='".$candyType."'";
+  }
+  if(strlen($candyType) && strlen($candyQuantity)){
+    $query .= ",";
+  }
+  else if(strlen($candyPrice) && strlen($candyQuantity)){
+    $query .= ",";
+  }
+  if(strlen($candyQuantity)){
+    $query .= " cquantity=".$candyQuantity;
+  }
+  $query .= " where cname='".$candyName."'";
   }else	{
     echo "  <h3><i>no field to be updated</i></h3>\n".
-        " <a href=\"https://cs564.cs.wisc.edu/halit/index.html\">Back to main page</a>\n".
+        " <a href=\"https://cs564.cs.wisc.edu/gblock/cs564Proj7/index.html\">Back to main page</a>\n".
 	" </body>\n</html>\n";
     exit();
   }
@@ -49,7 +59,7 @@
   pg_close();
 ?>
 
-        <?php echo "<a href=\"https://cs564.cs.wisc.edu/halit/index.html\">Back to main page</a>\n"?>
+        <?php echo "<a href=\"https://cs564.cs.wisc.edu/gblock/cs564Proj7/index.html\">Back to main page</a>\n"?>
  </body>
 
 </html>

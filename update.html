@@ -4,49 +4,104 @@
 
  <body>
 
- <h2>Sample CS 564 PHP Project: Update Page</h2>
-  <h3>Modify the Attributes of an Existing Book</h3>
+ <h2>CS 564 PHP Project: Update Page</h2>
+  <h3>Modify the Attributes of an Existing Candy</h3>
 
-Enter an exact title first (so that we can locate the book).<br>
+Enter an exact candy name first (so that we can locate the candy).<br>
 Then enter values for the remaining attributes.<br> 
 We will set those attributes to the entered values.
   <table width="40%" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <form name="form1" method="post" action="modify.php">
       <tr align="center">
-        <td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Title</font></td>
-        <td height="30" class="deepred" width="52%"><input type="text" name="title">
+        <td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Candy Name</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="uCandyName">
 	</tr>
 	<tr align="center">
-	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Author</font></td>
-        <td height="30" class="deepred" width="52%"><input type="text" name="author">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Price ($)</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="uCandyPrice">
 	</tr>
 	<tr align="center">
-	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Number of Copies</font></td>
-        <td height="30" class="deepred" width="52%"><input type="text" name="num">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Quantity</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="uCandyQuantity">
+        </td>
+      </tr>
+	<tr align="center">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Type</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="uCandyType">
         </td>
       </tr>
       <tr>
         <td height="24" align="center" width="48%">
         </td>
-        <td align="center" width="52%"><input type="submit" name="Submit" value="Submit"><input type="reset" name="Submit2" value="Reset">
+        <td align="center" width="52%"><input type="submit" name="uSubmit" value="Submit"><input type="reset" name="uSubmit2" value="Reset">
         </td>
       </tr>
     </form>
   </table>
 
 
-  <h3>Insert a New Book</h3>
+  <h3>Insert a New Candy</h3>
 
-  In your project, at this point you need to insert a form interface
-  that would allow users to insert a new entity (e.g., book in 
-  this sample project). 
+  <table width="40%" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+    <form name="form2" method="post" action="insert.php">
+      <tr align="center">
+        <td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Candy Name</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="iCandyName">
+	</tr>
+	<tr align="center">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Price ($)</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="iCandyPrice">
+	</tr>
+	<tr align="center">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Quantity</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="iCandyQuantity">
+        </td>
+      </tr>
+	<tr align="center">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Type</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="iCandyType">
+        </td>
+      </tr>
+      <tr>
+        <td height="24" align="center" width="48%">
+        </td>
+        <td align="center" width="52%"><input type="submit" name="iSubmit" value="Submit"><input type="reset" name="iSubmit2" value="Reset">
+        </td>
+      </tr>
+    </form>
+  </table>
 
 
-  <h3>Delete an Existing Book</h3>  
+  <h3>Delete an Existing Candy</h3>  
 
-  In your project, at this point you need to insert a form interface
-  that would allow users to delete an existing entity (e.g., 
-  we can delete a book using a title in this sample project). 
+  <table width="40%" border="0" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+    <form name="form3" method="post" action="delete.php">
+      <tr align="center">
+        <td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Candy Name</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="dCandyName">
+	</tr>
+	<tr align="center">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Price ($)</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="dCandyPrice">
+	</tr>
+	<tr align="center">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Quantity</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="dCandyQuantity">
+        </td>
+      </tr>
+	<tr align="center">
+	<td height="30" class="deepred" width="48%"><font face="Times New Roman, Times, serif">Type</font></td>
+        <td height="30" class="deepred" width="52%"><input type="text" name="dCandyType">
+        </td>
+      </tr>
+      <tr>
+        <td height="24" align="center" width="48%">
+        </td>
+        <td align="center" width="52%"><input type="submit" name="dSubmit" value="Submit"><input type="reset" name="dSubmit2" value="Reset">
+        </td>
+      </tr>
+    </form>
+  </table>
   
   </body>
 
