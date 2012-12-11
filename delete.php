@@ -23,12 +23,11 @@
   // Get category name and item counts
   if( strlen($candyPrice) > 0 || strlen($candyType) > 0 || strlen($candyQuantity) > 0)	{
     $query = "delete from candy_store_schema.candy (cname) values (";
-  }
-  if(strlen($candyName)){
-    $query .= "'" .$candyName . "')";
-  }else{
-    $query .= "'')";
-  }
+    if(strlen($candyName)){
+      $query .= "'" .$candyName . "')";
+    }else{
+      $query .= "'')";
+    }
 
   }else	{
     echo "  <h3><i>no field to be updated</i></h3>\n".
