@@ -5,7 +5,7 @@
  <body>
    <tr>
      <td colspan="2" align="center" valign="top">
-      Here are the search results (searched by candy name):<br>
+      Here are the search results:<br>
        <table border="1" width="75%">
         <tr>
          <td align="center" bgcolor="#cccccc"><b>Name</b></td>
