@@ -22,26 +22,31 @@
 	or die ("Couldn't Connect ".pg_last_error()); 
   // Get category name and item counts
   if( strlen($candyPrice) > 0 || strlen($candyType) > 0 || strlen($candyQuantity) > 0)	{
-    $query = "insert into candy_store_schema.candy (";
+    $query = "insert into candy_store_schema.candy (cprice, ctype, cquantity, cname) values (";
 	if( strlen($candyPrice) )	{
-    $query .= " cprice=".$candyPrice;
-	}
-	if( strlen($candyPrice) && strlen($candyType)  )	{
-    $query .= ",";
-	}
+    $query .= $candyPrice . ",";
+  }else{
+    $query .= "'',";
+  }
+
 	if( strlen($candyType) )	{
-    $query .= " ctype='".$candyType."'";
+    $query .= "'".$candyType."',";
+  }else{
+    $query .= "'',";
   }
-  if(strlen($candyType) && strlen($candyQuantity)){
-    $query .= ",";
-  }
-  else if(strlen($candyPrice) && strlen($candyQuantity)){
-    $query .= ",";
-  }
+
   if(strlen($candyQuantity)){
-    $query .= " cquantity=".$candyQuantity;
+    $query .= .$candyQuantity . ",";
+  }else{
+    $query .= "'',";
   }
-  $query .= ") where cname='".$candyName."'";
+
+  if(strlen($candyName)){
+    $query .= "'" .$candyName . "')";
+  }else{
+    $query .= "'')";
+  }
+
   }else	{
     echo "  <h3><i>no field to be updated</i></h3>\n".
         " <a href=\"https://cs564.cs.wisc.edu/gblock/cs564Proj7/index.html\">Back to main page</a>\n".
