@@ -7,7 +7,7 @@
 	
  <?php
    // First check the itemid to see if it has been set
-  if (!isset($_POST['iCandyName']) ) {
+  if (!isset($_POST['dCandyName']) ) {
     echo "  <h3><i>Error, title not set to an acceptable value</i></h3>\n".
         " <a href=\"https://cs564.cs.wisc.edu/gblock/cs564Proj7/index.html\">Back to main page</a>\n".
 	" </body>\n</html>\n";
