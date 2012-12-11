@@ -36,7 +36,7 @@
   }
 
   if(strlen($candyQuantity)){
-    $query .= .$candyQuantity . ",";
+    $query .= $candyQuantity . ",";
   }else{
     $query .= "'',";
   }
